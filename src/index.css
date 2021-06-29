@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+	height: 100%;
+	font-size: 1.2rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.loading{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	transform: translateX(-50%);
+	z-index: 10;
+	background-color: rgba(0, 238, 255, 0.774);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.loading span{
+	width: 30px;
+	height: 30px;
+	background-color: rgba(197, 241, 255, 0.726);
+	border-radius: 30px;
+	animation: grow-shrink 0.3s infinite alternate;
+}
+.loading span:nth-child(1){ animation-delay: 0.1s;}
+.loading span:nth-child(2){ animation-delay: 0.15s;}
+.loading span:nth-child(3){ animation-delay: 0.2s;}
+.loading span:nth-child(4){ animation-delay: 0.25s;}
+.loading span:nth-child(5){ animation-delay: 0.3s;}
+.loading span:nth-child(6){ animation-delay: 0.35s;}
+.loading span:nth-child(7){ animation-delay: 0.4s;}
+.loading span:nth-child(8){ animation-delay: 0.45s;}
+
+@keyframes grow-shrink{
+	0%{
+		height: 30px;
+	}
+	100%{
+		height: 200px;
+	}
+}
+
+.dropzone {
+	/* background: rgba(85, 239, 195, 0.616); */
+	background: #74b9ff;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hint-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+	text-align: center;
+	color: white;
+}
+.heading {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 2em;
+}
+.select-btn {
+    position: relative;
+    padding: 14px 20px;
+    border: none;
+    outline: none;
+	width: 20%;
+	margin: 0 auto 1em;
+	border-radius: 6px;
+	cursor: pointer;
+    background: rgb(0, 88, 175);
+    transition: 0.3s;
+    color: white;
+}
+.select-btn:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.select-btn:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(25px);
+    background: rgba(0, 87, 175, 0.50);
+    transform: translateY(30px) scale(0.9);
+    color: white;
+	z-index: -1;
+}
+.text-sm{
+    font-size: 0.8em;
+}

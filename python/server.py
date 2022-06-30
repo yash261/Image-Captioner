@@ -63,8 +63,8 @@ def generate_desc(model, tokenizer, photo, max_length):
             break
     return in_text
 
-tokenizer = load(open("./python/tokenizer.p","rb"))
-model = load_model('./python/models/model_92020-10-28.h5')
+tokenizer = load(open("tokenizer.p","rb"))
+model = load_model('models/model.h5')
 xception_model = Xception(include_top=False, pooling="avg")
 
 

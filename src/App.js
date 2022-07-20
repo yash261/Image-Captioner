@@ -118,7 +118,7 @@ function App() {
             getBase64(files[0], (result) => {
                 encodedImage = result;
                 setLoading(true);
-                fetch("http://127.0.0.1:3001/", {
+                fetch("https://imagecaptioner-backend.azurewebsites.net/", {
                     method: 'POST',
                     mode: 'cors',
                     body: encodedImage,
